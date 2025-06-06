@@ -8,30 +8,34 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
       font-family: 'Patrick Hand', cursive, sans-serif;
+      background-color: #fff;
       background: url('https://naomiblogs.neocities.org/image/%F0%9F%8F%B9.jpg') no-repeat center center;
-      background-size: cover;
+      background-size: contain; /* Fit the full notebook */
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .name-tag {
       position: absolute;
-      top: 41%;
+      top: 38.5%;
       left: 50%;
-      transform: translateX(-50%);
-      font-size: 2.2em;
+      transform: translate(-50%, -50%);
+      font-size: 2.4em;
       color: #333;
       font-weight: bold;
-      background-color: rgba(255, 255, 255, 0.4);
-      padding: 5px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px #999;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 6px 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #aaa;
       font-family: 'Patrick Hand', cursive, sans-serif;
     }
 
     .open-button {
       position: absolute;
-      bottom: 40px;
-      right: 40px;
+      bottom: 30px;
+      right: 30px;
       background-color: #fbb;
       color: #000;
       border: none;
