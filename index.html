@@ -2,111 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Naomi’s Diary (But Please Don’t Read)</title>
+  <title>Naomi's Diary</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
-
-    body {
-      background: #fff0f6;
-      font-family: 'Baloo 2', cursive, sans-serif;
-      color: #5a3e36;
-      max-width: 480px;
-      margin: 50px auto;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 15px rgba(230, 182, 193, 0.6);
-      user-select: none;
-      position: relative;
-    }
-
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      color: #d46a6a;
-      margin-bottom: 0;
-      letter-spacing: 0.15em;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 1.2rem;
-      color: #b65a5a;
-      margin-bottom: 25px;
-      font-style: italic;
-      user-select: text;
-    }
-
-    .warning {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #9c5e5e;
-      margin-bottom: 30px;
-      border: 1.5px dashed #d99494;
-      padding: 10px 15px;
-      border-radius: 12px;
-      background: #fbeaea;
-      user-select: text;
-    }
-
-    ul.entries {
-      list-style: none;
-      padding: 0;
+    html, body {
       margin: 0;
-      border-radius: 15px;
-      overflow: hidden;
+      padding: 0;
+      height: 100%;
+      font-family: 'Patrick Hand', cursive, sans-serif;
+      background: url('https://naomiblogs.neocities.org/image/%F0%9F%8F%B9.jpg') no-repeat center center;
+      background-size: cover;
     }
 
-    ul.entries li {
-      background: #fff;
-      border-radius: 15px;
-      margin-bottom: 15px;
-      padding: 18px 20px;
-      box-shadow: 0 5px 12px rgba(229, 179, 190, 0.5);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    .name-tag {
+      position: absolute;
+      top: 41%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.2em;
+      color: #333;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 5px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #999;
+      font-family: 'Patrick Hand', cursive, sans-serif;
+    }
+
+    .open-button {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      background-color: #fbb;
+      color: #000;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
       cursor: pointer;
-      user-select: text;
+      font-family: 'Patrick Hand', cursive, sans-serif;
+      transition: background 0.3s;
     }
 
-    ul.entries li:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(229, 179, 190, 0.8);
+    .open-button:hover {
+      background-color: #f99;
     }
-
-    ul.entries li a {
-      text-decoration: none;
-      color: #6f4b4b;
-      font-weight: 600;
-      font-size: 1.1rem;
-      display: block;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #b38a8a;
-      text-align: center;
-      font-style: italic;
-      user-select: text;
-    }
-
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>naomi’s diary</h1>
-  <p class="subtitle">(but please don’t read... seriously)</p>
-  <div class="warning">
-    ⚠️ <strong>Important:</strong> This diary is private and not meant for anyone else.  
-    If you’re here by accident, please respect Naomi’s privacy.  
-    <br><br>
-    <em>(...but if you *really* have to know: Username: admin | Password: projectforgetme)</em>
-  </div>
 
-  <ul class="entries">
-    <li><a href="entry1.html">June 1, 2025 — Something weird happened today... I don’t like it.</a></li>
-    <li><a href="entry2.html">June 5, 2025 — I keep feeling like someone’s watching me... It’s scary.</a></li>
-    <li><a href="entry3.html">June 10, 2025 — I’m losing pieces of my memory. What’s real anymore?</a></li>
-  </ul>
+  <div class="name-tag">Naomi</div>
 
-  <p class="footer">© 2025 Naomi. If you’re reading this, maybe don’t tell anyone...</p>
+  <button class="open-button" onclick="location.href='entry1.html'">Open</button>
+
 </body>
 </html>
+
