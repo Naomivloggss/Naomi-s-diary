@@ -10,69 +10,77 @@
       margin: 0;
       padding: 0;
       height: 100vh;
-      background-color: #fff1ec; /* softer cream */
-      background: url('https://naomiblogs.neocities.org/image/Gi%E1%BA%A5y%20note%20kawaiinotiontemplates.jpg') 
-                  no-repeat center top;
-      background-size: cover;
+      background-color: #fff1ec; /* soft cream background */
       font-family: 'Patrick Hand', cursive, sans-serif;
-      color: #5a3b36; /* deeper muted brown for text */
+      color: #5a3b36; /* warm brown text */
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
 
+    body {
+      background-image: url('https://naomiblogs.neocities.org/image/Gi%E1%BA%A5y%20note%20kawaiinotiontemplates.jpg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: contain;
+      background-color: #fff1ec; /* fallback color */
+    }
+
     .entry-container {
-      width: 85%;
-      max-width: 600px;
-      padding: 130px 35px 30px;
-      background: rgba(255, 241, 230, 0.5); /* faint cream overlay for softness */
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(210, 150, 140, 0.3);
-      line-height: 1.9em;
+      width: 600px;
+      padding: 140px 50px 70px 50px; /* top padding for notebook lines */
+      box-sizing: border-box;
       user-select: text;
-      backdrop-filter: saturate(150%) blur(2px);
+      line-height: 1.9em;
+      display: flex;
+      flex-direction: column;
+      min-height: 80vh;
+      position: relative;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2.5em;
-      margin: 0;
-      color: #b5726e;
-      letter-spacing: 3px;
+      font-size: 2.6em;
+      margin: 0 0 6px 0;
+      color: #b3726d; /* muted pinkish-brown */
+      letter-spacing: 2px;
       user-select: text;
       text-shadow: 1px 1px 0 #ffe8e1;
     }
 
     .date {
-      text-align: center;
       font-style: italic;
-      color: #a67c76;
-      margin: 6px 0 30px;
+      color: #a57b75;
+      margin: 0 0 40px 0;
       user-select: text;
       text-shadow: 1px 1px 0 #ffe8e1;
     }
 
     .entry-text {
-      margin-bottom: 40px;
       font-size: 1.3em;
       white-space: pre-wrap;
       user-select: text;
+      flex-grow: 1;
+    }
+
+    /* Add spacing between paragraphs */
+    .entry-text p {
+      margin-bottom: 3em;
     }
 
     .nav-back {
+      margin-top: auto; /* push to bottom */
       text-align: center;
-      margin-bottom: 30px;
     }
 
     .nav-back button {
       background-color: #dcb3b0;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 26px;
       font-family: 'Patrick Hand', cursive, sans-serif;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 1.1em;
       color: #623a36;
-      border-radius: 12px;
+      border-radius: 14px;
       cursor: pointer;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
       transition: background-color 0.3s ease;
@@ -88,14 +96,12 @@
 
   <div class="entry-container">
     <h1>Entry 1</h1>
-    <div class="date">June 1, 2025</div>
+    <div class="date">June 5</div>
 
     <div class="entry-text" spellcheck="false">
-Today me and dad went to the vacation house!! We had a very long drive and now I'm tired tho... Dad said he had to go on a work trip and that he'd be back soon! Can't wait to see Jane!! Also, keep the lights on tonight... trust me.
-    
-    
-    
-I've been hearing loud noises tonight... I'm quite scared :( Dad's not back yet.
+      <p>Today me and dad went to the vacation house!! We had a very long drive and now I'm tired tho... Dad said he had to go on a work trip and that he'd be back soon! Can't wait to see Jane!! Also, keep the lights on tonight... trust me.</p>
+      
+      <p>I've been hearing loud noises tonight... I'm quite scared :( Dad's not back yet.</p>
     </div>
 
     <div class="nav-back">
