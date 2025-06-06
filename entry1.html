@@ -6,67 +6,77 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
-    body {
+    html, body {
       margin: 0;
-      padding: 30px;
-      background-color: #fff8f5;
-      font-family: 'Patrick Hand', cursive, monospace;
-      color: #4a2c3a;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      user-select: none; 
+      padding: 0;
+      height: 100vh;
+      background-color: #fff1ec; /* softer cream */
+      background: url('https://naomiblogs.neocities.org/image/Gi%E1%BA%A5y%20note%20kawaiinotiontemplates.jpg') 
+                  no-repeat center top;
+      background-size: cover;
+      font-family: 'Patrick Hand', cursive, sans-serif;
+      color: #5a3b36; /* deeper muted brown for text */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .entry-container {
+      width: 85%;
+      max-width: 600px;
+      padding: 130px 35px 30px;
+      background: rgba(255, 241, 230, 0.5); /* faint cream overlay for softness */
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(210, 150, 140, 0.3);
+      line-height: 1.9em;
+      user-select: text;
+      backdrop-filter: saturate(150%) blur(2px);
     }
 
     h1 {
       text-align: center;
       font-size: 2.5em;
-      margin-bottom: 0;
-      color: #b26a5b;
+      margin: 0;
+      color: #b5726e;
       letter-spacing: 3px;
       user-select: text;
+      text-shadow: 1px 1px 0 #ffe8e1;
     }
 
     .date {
       text-align: center;
       font-style: italic;
-      color: #a07a70;
-      margin-top: 5px;
-      margin-bottom: 30px;
+      color: #a67c76;
+      margin: 6px 0 30px;
       user-select: text;
+      text-shadow: 1px 1px 0 #ffe8e1;
     }
 
     .entry-text {
-      font-size: 1.4em;
-      background-color: #fff1e6;
-      padding: 25px 30px;
-      border-radius: 15px;
-      box-shadow: 4px 4px 15px #d8b7a7;
-      border: 1.5px solid #d6a87a;
+      margin-bottom: 40px;
+      font-size: 1.3em;
       white-space: pre-wrap;
       user-select: text;
     }
 
-    /* Navigation */
     .nav-back {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     .nav-back button {
-      background-color: #ddb4b1;
+      background-color: #dcb3b0;
       border: none;
-      padding: 12px 25px;
-      font-family: 'Patrick Hand', cursive, monospace;
+      padding: 10px 20px;
+      font-family: 'Patrick Hand', cursive, sans-serif;
       font-weight: bold;
-      font-size: 1.1em;
-      color: #5a2f2f;
+      font-size: 1em;
+      color: #623a36;
       border-radius: 12px;
       cursor: pointer;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
       transition: background-color 0.3s ease;
+      user-select: none;
     }
 
     .nav-back button:hover {
@@ -76,22 +86,21 @@
 </head>
 <body>
 
-  <h1>Entry 1</h1>
-  <div class="date">June 1, 2025</div>
+  <div class="entry-container">
+    <h1>Entry 1</h1>
+    <div class="date">June 1, 2025</div>
 
-  <div class="entry-text" spellcheck="false">
-Dear Diary,
+    <div class="entry-text" spellcheck="false">
+Today me and dad went to the vacation house!! We had a very long drive and now I'm tired tho... Dad said he had to go on a work trip and that he'd be back soon! Can't wait to see Jane!! Also, keep the lights on tonight... trust me.
+    
+    
+    
+I've been hearing loud noises tonight... I'm quite scared :( Dad's not back yet.
+    </div>
 
-Today felt strange... like something was watching me, but no one else seemed to notice.  
-I tried to focus on the small things — the gentle hum of the wind, the soft glow of my room’s lamp.  
-
-I want to write more, but it feels like my thoughts keep slipping away.  
-
-- Naomi
-  </div>
-
-  <div class="nav-back">
-    <button onclick="location.href='index.html'">← Back to Cover</button>
+    <div class="nav-back">
+      <button onclick="location.href='index.html'">← Back to Cover</button>
+    </div>
   </div>
 
 </body>
