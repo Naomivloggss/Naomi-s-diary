@@ -29,58 +29,71 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
 
-    /* Name inside the cream colored composition box */
+    /* Position name inside cream notebook name box */
     .name-tag {
       position: absolute;
-      /* Adjust these coordinates to fit exactly inside the cream name box */
-      top: 44.8%;
-      left: 52.5%;
+      top: 45.3%;
+      left: 53%;
       transform: translate(-50%, -50%);
-      font-size: 2.1em;
-      color: #3a2f22; /* dark brown to fit cream paper vibe */
+      font-size: 2.2em;
+      color: #3a2f22;
       font-weight: bold;
-      background-color: rgba(255, 248, 230, 0.8); /* cream-like */
+      background-color: rgba(255, 248, 230, 0.85);
       padding: 4px 22px;
       border-radius: 10px;
       box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
       user-select: none;
-
-      /* Sparkle effect container */
+      white-space: nowrap;
+      cursor: default;
+      filter: drop-shadow(0 0 1px rgba(255,255,255,0.9));
       overflow: visible;
     }
 
-    /* Sparkle animation */
+    /* Sparkle effect */
     @keyframes sparkle {
-      0%, 100% {opacity: 1; transform: scale(1) rotate(0deg);}
-      50% {opacity: 0.6; transform: scale(1.1) rotate(15deg);}
+      0%, 100% {
+        opacity: 1;
+        text-shadow:
+          0 0 4px #fff,
+          0 0 10px #fff,
+          0 0 12px #fff;
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        opacity: 0.7;
+        text-shadow:
+          0 0 8px #ffe4e1,
+          0 0 14px #ffccd5,
+          0 0 20px #ffccd5;
+        transform: scale(1.05) rotate(10deg);
+      }
     }
 
     .sparkle {
       display: inline-block;
-      animation: sparkle 2.5s infinite ease-in-out;
-      filter: drop-shadow(0 0 1px #fff);
-      position: relative;
+      animation: sparkle 3s infinite ease-in-out;
     }
 
     /* Open button with lock icon */
     .open-button {
       position: absolute;
-      bottom: 28px;
-      right: 28px;
+      bottom: 30px;
+      right: 30px;
       background-color: #ddb4b1; /* dull muted pink */
       color: #5a2f2f;
       border: none;
-      padding: 6px 14px 6px 10px;
+      padding: 8px 14px;
       border-radius: 8px;
-      font-size: 0.95em;
+      font-size: 1em;
       font-weight: bold;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
       cursor: pointer;
       display: flex;
       align-items: center;
       gap: 6px;
       transition: background 0.3s;
       font-family: 'Patrick Hand', cursive, sans-serif;
+      outline: none;
     }
 
     .open-button:hover {
@@ -92,7 +105,8 @@
       width: 18px;
       height: 18px;
       fill: #5a2f2f;
-      filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+      flex-shrink: 0;
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -101,6 +115,7 @@
 
   <div class="notebook-wrapper">
     <img class="notebook-img" src="https://naomiblogs.neocities.org/image/%F0%9F%8F%B9.jpg" alt="Notebook Cover" />
+    
     <div class="name-tag"><span class="sparkle">Naomi</span></div>
 
     <button class="open-button" onclick="location.href='entry1.html'">
